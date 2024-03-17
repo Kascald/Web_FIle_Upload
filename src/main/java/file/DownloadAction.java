@@ -29,7 +29,7 @@ public class DownloadAction extends HttpServlet {
 		}
 
 		String downloadName = null;
-		if(!request.getHeader("user=agent").contains("MSE")) { //HTTP헤더의 식별자가 인터넷 익스플로러를 제외한 브라우저에서 실행한 경우 :Default-Format: User-Agent: <product> / <product-version> <comment>
+		if(!request.getHeader("user-agent").contains("MSE")) { //HTTP헤더의 식별자가 인터넷 익스플로러를 제외한 브라우저에서 실행한 경우 :Default-Format: User-Agent: <product> / <product-version> <comment>
 			downloadName = new String(fileName.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1); //UTF8 to ISO8859_1 String ecode
 		}else {
 			downloadName = new String(fileName.getBytes("EUC-KR"), StandardCharsets.ISO_8859_1); //EUC-KR to ISO8859_1 String ecode
@@ -44,6 +44,7 @@ public class DownloadAction extends HttpServlet {
 		while((data = (fileInputStream.read(b , 0 , b.length))) != -1) { //Reads up to len bytes of data from this input stream into an array of bytes
 			servletOutputStream.write(b, 0 , data); // len bytes = > b.length ,  offset = the start offset in the destination array 'b' , len - the maximum number of bytes read.
 		}
+		new FileDAO().hit(fileName);
 
 		servletOutputStream.flush();  //inherited from java.io.OutputStream  ::Flushes this output stream and forces any buffered output bytes to be written out.
 		servletOutputStream.close();  //inherited from java.io.OutputStream  ::Closes this output stream and releases any system resources associated with this stream.

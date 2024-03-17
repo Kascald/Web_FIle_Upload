@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.net.URLEncoder" %>
 <%@ page import="java.io.File" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="file.FileDTO" %>
+<%@ page import="file.FileDAO" %>
+<%@ page import="java.nio.charset.StandardCharsets" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,12 +15,16 @@
 <body>
     <%
 //         String directory = application.getRealPath("/upload/");
-    	String directory = "H:\\jsp\\upload";
-        String files[] = new File(directory).list();
+//    	String directory = "H:\\jsp\\upload";
+//        String files[] = new File(directory).list();
 
-        for(String file : files){
-            out.write("<a href=\"" + request.getContextPath() + "/downloadAction?file=" +
-                    java.net.URLEncoder.encode(file, "UTF-8") + "\">" + file + "</a><br>");
+        ArrayList<FileDTO> filelist = new FileDAO().getList();
+
+
+        for(FileDTO file : filelist){
+            out.write("<a href=\"" + request.getContextPath() + "/DownloadAction?file=" +
+                    URLEncoder.encode(file.getFileRealName(), StandardCharsets.UTF_8) + "\">" +
+                    file.getFileName() + " - (다운로드 횟수 : "+ file.getDownloadCount() + ") </a><br>");
         }
     %>
 
