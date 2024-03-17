@@ -20,9 +20,9 @@
 
     MultipartRequest multipartRequest = new MultipartRequest(request, directory, maxSize ,encoding, new DefaultFileRenamePolicy());
 
-    Enumeration fileNames = multipartRequest.getFileNames();
+    Enumeration fileNames = multipartRequest.getFileNames(); //열거형 처리 
     while(fileNames.hasMoreElements()){
-    	String parameter = (String) fileNames.nextElement();
+    	String parameter = (String) fileNames.nextElement(); //강제 형변환으로 파라미터로 사용하게 문자열 변경
     	String fileName = multipartRequest.getOriginalFileName(parameter);
     	String fileRealName = multipartRequest.getFilesystemName(parameter);
     
