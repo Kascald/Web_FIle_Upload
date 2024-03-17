@@ -27,7 +27,7 @@
                     file.getFileName() + " - (다운로드 횟수 : "+ file.getDownloadCount() + ") </a><br>");
         }
     %>
-
+	<br>
     <a href="${pageContext.request.contextPath}/index.jsp">메인으로 가기</a>
 </body>
 </html>

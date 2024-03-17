@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="file.FileDAO" %>
 <%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <%@ page import="com.oreilly.servlet.MultipartRequest" %>
 <!DOCTYPE html>
@@ -13,14 +14,21 @@
 <body>
 <%
 //     String directory = application.getRealPath("/upload/"); //저장할 경로
-	String directory = "H:\\jsp\\upload";  //app 내부의 upload 폴더가 아닌 외부의 폴더를 경로로 수정
+	String directory = "H:\\jsp\\upload\\";  //app 내부의 upload 폴더가 아닌 외부의 폴더를 경로로 수정
     int maxSize = 1024 * 1024 * 100; //100mb 제한
     String encoding = "UTF-8";
 
     MultipartRequest multipartRequest = new MultipartRequest(request, directory, maxSize ,encoding, new DefaultFileRenamePolicy());
 
-    String fileName = multipartRequest.getOriginalFileName("file"); //
-    String fileRealName = multipartRequest.getFilesystemName("file"); //파일 실제 이름
+    Enumeration fileNames = multipartRequest.getFileNames();
+    while(fileNames.hasMoreElements()){
+    	String parameter = (String) fileNames.nextElement();
+    	String fileName = multipartRequest.getOriginalFileName(parameter);
+    	String fileRealName = multipartRequest.getFilesystemName(parameter);
+    
+    if (fileName == null) continue; // 파일 선택 안한 항목에선 pass
+//     String fileName = multipartRequest.getOriginalFileName("file"); //
+//     String fileRealName = multipartRequest.getFilesystemName("file"); //파일 실제 이름
 
 
     if(!fileName.endsWith(".gif") && !fileName.endsWith(".png") &&
@@ -33,10 +41,10 @@
         new FileDAO().upload(fileName,fileRealName); //upload 실행단
         out.write("파일명: " + fileName + "<br>");
         out.write("실제파일명: " + fileRealName + "<br>");
+    	}
     }
-
 %>
-
+<br>
 <a href="${pageContext.request.contextPath}/index.jsp">메인으로 돌아가기</a>
 </body>
 </html>

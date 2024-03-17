@@ -20,7 +20,7 @@ public class DownloadAction extends HttpServlet {
 		String fileName = request.getParameter("file");
 //		String directory = this.getServletContext().getRealPath("/upload/"); //실제 경로 받아오기
 
-		String directory = "H:\\jsp\\upload";
+		String directory = "H:\\jsp\\upload\\";
 		File file = new File(directory+"/"+fileName);
 
 		String mimeType = getServletContext().getMimeType(file.toString());//file의 mimeType를 획득해온다. /2/Multipurpose Internet Mail Extensions or MIME type
