@@ -25,7 +25,5 @@
     out.write("파일명: " + fileName + "<br>");
     out.write("실제파일명: " + fileRealName + "<br>");
 %>
-
-<a href="${pageContext.request.contextPath}/index.jsp">메인으로 돌아가기</a>
 </body>
 </html>

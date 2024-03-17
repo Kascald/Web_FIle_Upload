@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Web_FIle_Upload:Web exploded" />
+      <artifact name="Web_FIle_Upload:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,18 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebfab6d1-8c15-4fa6-a332-320500c72230" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Web_FIle_Upload_Web_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/cos.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jdk_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_FIle_Upload.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/file/FileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/file/FileDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fileDownload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fileDownload.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +59,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 9.0.82.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -200,7 +192,7 @@
       <workItem from="1710412312366" duration="286000" />
       <workItem from="1710412614003" duration="7268000" />
       <workItem from="1710425670202" duration="1571000" />
-      <workItem from="1710649963903" duration="513000" />
+      <workItem from="1710649963903" duration="940000" />
     </task>
     <servers />
   </component>

@@ -11,9 +11,9 @@ public class FileDAO {
     public FileDAO() {
         try {
             String dbURL = "jdbc:mysql://localhost:3306/file";
-            String dbID = "webdb";
-            String dbPassword = "1234";
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            String dbID = "root";
+            String dbPassword = "12345";
+            Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
         } catch (Exception e) {
             e.printStackTrace();
