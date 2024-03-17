@@ -10,6 +10,8 @@
 <form action="uploadAction.jsp" method="post" enctype="multipart/form-data">
     파일:&nbsp;&nbsp;<input type="file" name="file">
     <input type="submit" value="업로드"><br>
+    
+    <a href="${pageContext.request.contextPath}/fileDownload.jsp">파일 다운로드로 가기</a>
 </form>
 </body>
 </html>

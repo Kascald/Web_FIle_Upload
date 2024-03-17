@@ -12,10 +12,12 @@
         String directory = application.getRealPath("/upload/");
         String files[] = new File(directory).list();
 
-        for(String file : files) {
-            out.write("<a href = \"" + request.getContextPath() + "/downloadAction?file="
-                    + java.net.URLEncoder.encode(file,"UTF-8") + "\">"+ file + "</a><br>");
+        for(String file : files){
+            out.write("<a href=\"" + request.getContextPath() + "/downloadAction?file=" +
+                    java.net.URLEncoder.encode(file, "UTF-8") + "\">" + file + "</a><br>");
         }
     %>
+
+    <a href="${pageContext.request.contextPath}/index.jsp">메인으로 가기</a>
 </body>
 </html>

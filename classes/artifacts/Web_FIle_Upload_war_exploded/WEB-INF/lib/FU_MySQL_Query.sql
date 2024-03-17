@@ -1,4 +1,5 @@
 -- 실습용 데이터베이스 생성
+drop database file;
 create database file;
 use file;
 
