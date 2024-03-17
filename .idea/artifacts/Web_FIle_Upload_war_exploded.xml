@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Web_FIle_Upload:war exploded">
+    <output-path>$PROJECT_DIR$/classes/artifacts/Web_FIle_Upload_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Web_FIle_Upload" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Web_FIle_Upload/web/Web" />
+      <element id="library" level="project" name="jdk-11.0" />
+      <element id="library" level="project" name="mysql-connector-j-8.3.0" />
+      <element id="library" level="project" name="cos" />
+      <element id="module-source" name="Web_FIle_Upload" />
+      <element id="module-output" name="Web_FIle_Upload" />
+    </root>
+  </artifact>
+</component>
