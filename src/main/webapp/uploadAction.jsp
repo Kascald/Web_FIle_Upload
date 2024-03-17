@@ -12,7 +12,8 @@
 </head>
 <body>
 <%
-    String directory = application.getRealPath("/upload/"); //저장할 경로
+//     String directory = application.getRealPath("/upload/"); //저장할 경로
+	String directory = "H:\\jsp\\upload";  //app 내부의 upload 폴더가 아닌 외부의 폴더를 경로로 수정
     int maxSize = 1024 * 1024 * 100; //100mb 제한
     String encoding = "UTF-8";
 
@@ -21,9 +22,19 @@
     String fileName = multipartRequest.getOriginalFileName("file"); //
     String fileRealName = multipartRequest.getFilesystemName("file"); //파일 실제 이름
 
-    new FileDAO().upload(fileName,fileRealName); //upload 실행단
-    out.write("파일명: " + fileName + "<br>");
-    out.write("실제파일명: " + fileRealName + "<br>");
+
+    if(!fileName.endsWith(".gif") && !fileName.endsWith(".png") &&
+    !fileName.endsWith(".jpg") && !fileName.endsWith(".txt"))  //gif, png, jpg, txt 확장자만 업러드에 허용하겠다.
+    {
+       File file = new File(directory + "/" + fileRealName);  //일단 불러들인 후
+       file.delete();                                         // 삭제를 실행함
+       out.write("업로드할 수 없는 확장자 입니다.");
+    }else {
+        new FileDAO().upload(fileName,fileRealName); //upload 실행단
+        out.write("파일명: " + fileName + "<br>");
+        out.write("실제파일명: " + fileRealName + "<br>");
+    }
+
 %>
 
 <a href="${pageContext.request.contextPath}/index.jsp">메인으로 돌아가기</a>

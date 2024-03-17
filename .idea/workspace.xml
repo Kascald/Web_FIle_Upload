@@ -10,12 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebfab6d1-8c15-4fa6-a332-320500c72230" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build/classes/file/DownloadAction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/file/DownloadAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Web_FIle_Upload_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Web_FIle_Upload_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fileDownload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fileDownload.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadAction.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +194,7 @@
       <workItem from="1710649963903" duration="2685000" />
       <workItem from="1710661475153" duration="2241000" />
       <workItem from="1710666100033" duration="869000" />
-      <workItem from="1710667395342" duration="2111000" />
+      <workItem from="1710667395342" duration="2606000" />
     </task>
     <servers />
   </component>
